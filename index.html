@@ -4,120 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumiere - Đèn & Quạt Trần Trang Trí Cao Cấp</title>
+    <!-- Nhúng Tailwind CSS để dựng giao diện nhanh và chuẩn responsive -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Nhúng Google Fonts hỗ trợ hiển thị tiếng Việt mượt mà -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Nhúng Font Awesome để hiển thị biểu tượng điện thoại, ngôi sao, icon đóng -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         body { font-family: 'Inter', sans-serif; }
         .font-serif { font-family: 'Playfair Display', serif; }
-        .product-card:hover img { transform: scale(1.08); }
+        /* Hiệu ứng phóng to nhẹ ảnh khi hover chuột trên máy tính */
+        .product-card:hover .product-img { transform: scale(1.08); }
         html { scroll-behavior: smooth; }
+        /* Tối ưu hóa việc không hiển thị thanh cuộn ngang ngoài ý muốn */
+        body { overflow-x: hidden; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- CẤU HÌNH THÔNG TIN LIÊN HỆ TẠI ĐÂY -->
     <script>
-        const SO_DIEN_THOAI = "0896581688"; // Đã cập nhật số điện thoại mới của bạn tại đây
+        // Số điện thoại của bạn, thay đổi một lần ở đây sẽ tự động cập nhật toàn trang web
+        const SO_DIEN_THOAI = "0896581688"; 
     </script>
 
-    <!-- Header -->
     <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-serif font-bold text-amber-600">LUMIERE.</a>
-            <nav class="hidden md:flex space-x-8 font-medium">
+        <div class="container mx-auto px-2 sm:px-4 py-3 flex justify-between items-center">
+            <!-- Logo thương hiệu -->
+            <a href="#" class="text-xl sm:text-2xl font-serif font-bold text-amber-600">LUMIERE.</a>
+            <!-- Menu nhanh cho máy tính -->
+            <nav class="hidden md:flex space-x-6 lg:space-x-8 font-medium text-sm lg:text-base">
                 <a href="#quat-tran" class="hover:text-amber-600 transition">Quạt Trần</a>
                 <a href="#den-op-tran" class="hover:text-amber-600 transition">Đèn Ốp Trần</a>
                 <a href="#den-chum" class="hover:text-amber-600 transition">Đèn Chùm</a>
             </nav>
-            <a href="tel:0896581688" class="bg-amber-600 text-white px-5 py-2 rounded-full font-bold hover:bg-amber-700 transition flex items-center gap-2">
-                <i class="fa-solid fa-phone"></i> Gọi ngay: 0896.581.688
+            <!-- Nút gọi ngay phản hồi nhanh -->
+            <a href="tel:0896581688" class="bg-amber-600 text-white px-3 py-1.5 sm:px-5 sm:py-2 rounded-full text-xs sm:text-sm font-bold hover:bg-amber-700 transition flex items-center gap-1 sm:gap-2 shadow-md">
+                <i class="fa-solid fa-phone animate-pulse"></i> 
+                <span class="hidden xs:inline">Gọi ngay:</span> 0896.581.688
             </a>
         </div>
     </header>
 
-    <!-- Banner -->
-    <section class="h-[500px] flex items-center justify-center relative overflow-hidden pt-16">
+    <section class="h-[350px] sm:h-[450px] md:h-[500px] flex items-center justify-center relative overflow-hidden pt-12">
         <div class="absolute inset-0 bg-black/40 z-10"></div>
         <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Banner Lumiere">
-        <div class="relative z-20 text-center text-white px-4">
-            <h1 class="text-4xl md:text-6xl font-serif mb-4">Ánh Sáng Nghệ Thuật</h1>
-            <p class="text-xl opacity-90">Nâng tầm đẳng cấp không gian sống của bạn</p>
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-serif mb-3 font-bold leading-tight">Ánh Sáng Nghệ Thuật</h1>
+            <p class="text-sm sm:text-base md:text-xl opacity-90 font-light tracking-wide">Nâng tầm đẳng cấp và khơi nguồn sinh khí cho ngôi nhà của bạn</p>
         </div>
     </section>
 
-    <!-- Danh mục Quạt Trần -->
-    <section id="quat-tran" class="py-16 container mx-auto px-4">
-        <div class="flex items-center justify-between mb-10 border-b pb-4">
-            <h2 class="text-3xl font-serif font-bold">Quạt Trần Trang Trí</h2>
-            <span class="text-gray-500 uppercase tracking-widest text-sm font-bold">Ceiling Fans</span>
-        </div>
-        <div id="list-quat-tran" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Sản phẩm sẽ tự động đổ vào đây từ Javascript -->
-        </div>
-    </section>
-
-    <!-- Danh mục Đèn Ốp Trần -->
-    <section id="den-op-tran" class="py-16 bg-white border-y border-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between mb-10 border-b pb-4">
-                <h2 class="text-3xl font-serif font-bold">Đèn Ốp Trần</h2>
-                <span class="text-gray-500 uppercase tracking-widest text-sm font-bold">Ceiling Lights</span>
+    <section id="quat-tran" class="py-12 container mx-auto px-2 sm:px-4">
+        <div class="flex items-end justify-between mb-8 border-b pb-3">
+            <div>
+                <h2 class="text-lg sm:text-2xl md:text-3xl font-serif font-bold text-gray-900">Quạt Trần Trang Trí</h2>
+                <p class="text-[10px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-1">Premium Ceiling Fans</p>
             </div>
-            <div id="list-den-op-tran" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Sản phẩm sẽ tự động đổ vào đây từ Javascript -->
+            <span class="text-[9px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded">Hàng Sẵn Có</span>
+        </div>
+        <!-- Lưới 4 cột trên cả di động (grid-cols-4) -->
+        <div id="list-quat-tran" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6 lg:gap-8">
+            <!-- Sản phẩm sẽ tự động render bằng JavaScript -->
+        </div>
+    </section>
+
+    <section id="den-op-tran" class="py-12 bg-white border-y border-gray-100">
+        <div class="container mx-auto px-2 sm:px-4">
+            <div class="flex items-end justify-between mb-8 border-b pb-3">
+                <div>
+                    <h2 class="text-lg sm:text-2xl md:text-3xl font-serif font-bold text-gray-900">Đèn Ốp Trần Hiện Đại</h2>
+                    <p class="text-[10px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-1">Ceiling Lights</p>
+                </div>
+                <span class="text-[9px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded">Bảo Hành 2 Năm</span>
+            </div>
+            <!-- Lưới 4 cột trên cả di động (grid-cols-4) -->
+            <div id="list-den-op-tran" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6 lg:gap-8">
+                <!-- Sản phẩm sẽ tự động render bằng JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Danh mục Đèn Chùm -->
-    <section id="den-chum" class="py-16 container mx-auto px-4">
-        <div class="flex items-center justify-between mb-10 border-b pb-4">
-            <h2 class="text-3xl font-serif font-bold">Đèn Chùm Sang Trọng</h2>
-            <span class="text-gray-500 uppercase tracking-widest text-sm font-bold">Chandeliers</span>
+    <section id="den-chum" class="py-12 container mx-auto px-2 sm:px-4">
+        <div class="flex items-end justify-between mb-8 border-b pb-3">
+            <div>
+                <h2 class="text-lg sm:text-2xl md:text-3xl font-serif font-bold text-gray-900">Đèn Chùm Sang Trọng</h2>
+                <p class="text-[10px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-1">Luxury Chandeliers</p>
+            </div>
+            <span class="text-[9px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded">Nhập Khẩu Cao Cấp</span>
         </div>
-        <div id="list-den-chum" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Sản phẩm sẽ tự động đổ vào đây từ Javascript -->
+        <!-- Lưới 4 cột trên cả di động (grid-cols-4) -->
+        <div id="list-den-chum" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6 lg:gap-8">
+            <!-- Sản phẩm sẽ tự động render bằng JavaScript -->
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
         <div class="container mx-auto px-4 text-center">
-            <p class="text-xl font-serif mb-4">LUMIERE LIGHTING</p>
-            <p class="opacity-60 mb-6">Chất lượng tạo nên thương hiệu</p>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="hover:text-amber-500 transition"><i class="fa-brands fa-facebook text-2xl"></i></a>
-                <a href="tel:0896581688" class="hover:text-amber-500 transition text-2xl font-bold flex items-center gap-2">
-                    <i class="fa-solid fa-phone"></i> 0896.581.688
+            <p class="text-2xl font-serif font-bold text-white mb-2 tracking-widest">LUMIERE LIGHTING</p>
+            <p class="text-xs sm:text-sm text-gray-400 mb-6">Kiến tạo không gian hoàng gia cho ngôi nhà của bạn</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-8 text-sm">
+                <a href="tel:0896581688" class="hover:text-amber-500 transition font-bold text-lg text-white flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-amber-500"></i> Hotline: 0896.581.688
                 </a>
+                <span class="hidden sm:inline text-gray-600">|</span>
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-envelope text-amber-500"></i> contact@lumiere.vn
+                </span>
             </div>
-            <p class="mt-10 text-sm opacity-40">&copy; 2026 Website Lighting. All Rights Reserved.</p>
+            
+            <p class="text-[10px] sm:text-xs text-gray-600">&copy; 2026 Website Lighting. All Rights Reserved. Designed for Github Pages.</p>
         </div>
     </footer>
 
-    <!-- LIGHTBOX MODAL: Giao diện phóng to ảnh -->
-    <div id="image-modal" class="fixed inset-0 bg-black/95 z-[100] hidden flex items-center justify-center p-4 cursor-zoom-out" onclick="closeImageModal()">
-        <!-- Nút đóng -->
-        <button class="absolute top-6 right-6 text-white text-3xl hover:text-amber-500 transition duration-300" onclick="closeImageModal(event)">
+    <div id="image-modal" class="fixed inset-0 bg-black/95 z-[100] hidden flex items-center justify-center p-2 cursor-zoom-out" onclick="closeImageModal()">
+        <!-- Nút đóng góc phải -->
+        <button class="absolute top-4 right-4 text-white text-3xl hover:text-amber-500 transition duration-300 focus:outline-none" onclick="closeImageModal(event)">
             <i class="fa-solid fa-xmark"></i>
         </button>
-        <!-- Ảnh phóng to -->
-        <img id="modal-img" src="" alt="Zoomed Image" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl transition-transform duration-300 transform scale-95" onclick="event.stopPropagation()">
+        <!-- Thẻ ảnh hiển thị lớn -->
+        <img id="modal-img" src="" alt="Zoomed Image" class="max-w-full max-h-[92vh] object-contain rounded-lg shadow-2xl transition-all duration-300 transform scale-95" onclick="event.stopPropagation()">
     </div>
 
-    <!-- JAVASCRIPT ĐỂ QUẢN LÝ SẢN PHẨM -->
     <script>
-        /* HƯỚNG DẪN: 
-           - file: Tên ảnh bạn tải lên thư mục trên Github (để chung thư mục với index.html)
-           - ten: Tên hiển thị
-           - ma: Mã sản phẩm
-           - sao: Số sao đánh giá (từ 1 đến 5)
-        */
-
+        // Danh sách Quạt trần (Bỏ hoàn toàn thuộc tính 'sao' để bạn dễ quản lý ảnh)
         const danhSachQuatTran = [
-        { file: "quat-tran-1 (1).jpg", ten: "Quạt trần 1", ma: "QT-001" },
+             { file: "quat-tran-1 (1).jpg", ten: "Quạt trần 1", ma: "QT-001" },
 { file: "quat-tran-1 (2).jpg", ten: "Quạt trần 2", ma: "QT-002" },
 { file: "quat-tran-1 (3).jpg", ten: "Quạt trần 3", ma: "QT-003" },
 { file: "quat-tran-1 (4).jpg", ten: "Quạt trần 4", ma: "QT-004" },
@@ -233,44 +246,75 @@
 { file: "quat-tran-1 (114).jpg", ten: "Quạt trần 114", ma: "QT-114" },
         ];
 
+        // Danh sách Đèn ốp trần
         const danhSachDenOpTran = [
-            { file: "den-op-1.jpg", ten: "Đèn Ốp Pha Lê", ma: "OT-001", sao: 5 },
-            { file: "den-op-2.jpg", ten: "Đèn Ốp Hiện Đại", ma: "OT-002", sao: 4 },
+            { file: "den-op-1.jpg", ten: "Đèn Mâm Ốp Trần Pha Lê", ma: "OT-001" },
+            { file: "den-op-2.jpg", ten: "Đèn Ốp Hiện Đại Chung Cư", ma: "OT-002" },
+            { file: "den-op-3.jpg", ten: "Đèn Ốp LED Tròn Đổi Màu", ma: "OT-003" },
+            { file: "den-op-4.jpg", ten: "Đèn Ốp Thủy Tinh Nghệ Thuật", ma: "OT-004" }
         ];
 
+        // Danh sách Đèn chùm
         const danhSachDenChum = [
-            { file: "den-chum-1.jpg", ten: "Đèn Chùm Thông Tầng", ma: "DC-001", sao: 5 },
-            { file: "den-chum-2.jpg", ten: "Đèn Chùm Nến", ma: "DC-002", sao: 5 },
+            { file: "den-chum-1.jpg", ten: "Đèn Chùm Pha Lê K9", ma: "DC-001" },
+            { file: "den-chum-2.jpg", ten: "Đèn Chùm Nến Cổ Điển", ma: "DC-002" },
+            { file: "den-chum-3.jpg", ten: "Đèn Chùm Thông Tầng Lớn", ma: "DC-003" },
+            { file: "den-chum-4.jpg", ten: "Đèn Chùm Hiện Đại Bắc Âu", ma: "DC-004" }
         ];
 
-        // Hàm vẽ sản phẩm ra màn hình
         function renderProducts(list, containerId) {
             const container = document.getElementById(containerId);
             let html = "";
 
             list.forEach(item => {
-                // Tạo sao đánh giá
+                // Tự động gán ngẫu nhiên 4.5 hoặc 5 sao cho mỗi sản phẩm mới nhập
+                const rating = Math.random() < 0.5 ? 4.5 : 5;
+                
+                // Tạo ngôi sao vàng tự động xử lý cả nửa sao (Ví dụ: 4.5 sao)
                 let stars = "";
                 for (let i = 1; i <= 5; i++) {
-                    stars += i <= item.sao ? '<i class="fa-solid fa-star text-amber-400"></i>' : '<i class="fa-regular fa-star text-gray-300"></i>';
+                    if (rating >= i) {
+                        stars += '<i class="fa-solid fa-star text-amber-400"></i>';
+                    } else if (rating > (i - 1)) {
+                        stars += '<i class="fa-solid fa-star-half-stroke text-amber-400"></i>';
+                    } else {
+                        stars += '<i class="fa-regular fa-star text-gray-200"></i>';
+                    }
                 }
 
                 html += `
-                    <div class="product-card bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition hover:shadow-lg">
-                        <!-- Thêm sự kiện click để zoom ảnh khi ấn vào -->
-                        <div class="h-64 overflow-hidden bg-gray-100 cursor-zoom-in" onclick="openImageModal('${item.file}', '${item.ten}')" title="Nhấp để phóng to ảnh">
-                            <img src="${item.file}" alt="${item.ten}" class="w-full h-full object-cover transition duration-500">
+                    <div class="product-card bg-white rounded-md sm:rounded-xl shadow-xs sm:shadow-sm border border-gray-100 overflow-hidden transition duration-300 flex flex-col justify-between h-full">
+                        <!-- Vùng chứa ảnh tối ưu kích thước tỉ lệ vuông và hỗ trợ click zoom ảnh -->
+                        <div class="aspect-square w-full overflow-hidden bg-gray-50 cursor-zoom-in relative group" onclick="openImageModal('${item.file}', '${item.ten}')" title="Bấm để xem ảnh phóng to">
+                            <img src="${item.file}" alt="${item.ten}" 
+                                 class="product-img w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/400x400/f5f5f5/c0a080?text=Lumiere+Lighting'">
+                            <!-- Nhãn chỉ thị xem nhanh góc ảnh -->
+                            <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                <span class="bg-black/60 text-white text-[9px] px-1.5 py-0.5 rounded-full hidden sm:inline-block"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Xem ảnh</span>
+                            </div>
                         </div>
-                        <div class="p-5">
-                            <p class="text-xs text-gray-400 mb-1">Mã SP: ${item.ma}</p>
-                            <h3 class="font-bold text-lg mb-2 truncate">${item.ten}</h3>
-                            <div class="mb-4 text-xs">${stars}</div>
-                            <div class="flex items-center justify-between border-t pt-4">
-                                <a href="tel:${SO_DIEN_THOAI}" class="text-amber-600 font-bold hover:text-amber-700">
-                                    Giá: Liên hệ
+                        
+                        <!-- Vùng chứa thông tin nhỏ gọn thích ứng màn hình hẹp -->
+                        <div class="p-1 sm:p-3 flex flex-col justify-between flex-grow">
+                            <div>
+                                <p class="text-[8px] sm:text-[10px] text-gray-400 font-mono mb-0.5">Mã: ${item.ma}</p>
+                                <h3 class="font-semibold text-[10px] sm:text-xs md:text-sm text-gray-800 line-clamp-2 leading-tight min-h-[2.5em] sm:min-h-0 mb-1" title="${item.ten}">
+                                    ${item.ten}
+                                </h3>
+                                <div class="text-[7px] sm:text-[10px] space-x-0.5 mb-2 flex items-center">
+                                    ${stars}
+                                    <span class="text-gray-400 text-[7px] sm:text-[9px] ml-1 font-semibold">${rating}</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Nút hành động gọi trực tiếp cho khách hàng -->
+                            <div class="border-t pt-1.5 flex items-center justify-between gap-1 mt-auto">
+                                <a href="tel:${SO_DIEN_THOAI}" class="text-amber-600 font-bold text-[9px] sm:text-xs hover:text-amber-700 truncate">
+                                    Giá: <span class="underline">Liên hệ</span>
                                 </a>
-                                <a href="tel:${SO_DIEN_THOAI}" class="bg-amber-50 text-amber-600 p-2 rounded-lg hover:bg-amber-600 hover:text-white transition">
-                                    <i class="fa-solid fa-phone"></i>
+                                <a href="tel:${SO_DIEN_THOAI}" class="bg-amber-50 hover:bg-amber-600 text-amber-600 hover:text-white p-1 sm:p-1.5 rounded transition duration-200 flex items-center justify-center" title="Gọi điện tư vấn">
+                                    <i class="fa-solid fa-phone text-[8px] sm:text-xs"></i>
                                 </a>
                             </div>
                         </div>
@@ -280,19 +324,22 @@
             container.innerHTML = html;
         }
 
-        // --- CÁC HÀM XỬ LÝ LIGHTBOX ZOOM ẢNH ---
+        // --- CÁC HÀM XỬ LÝ SỰ KIỆN LIGHTBOX MODAL PHÓNG TO ---
         function openImageModal(imgSrc, imgAlt) {
             const modal = document.getElementById('image-modal');
             const modalImg = document.getElementById('modal-img');
             modalImg.src = imgSrc;
             modalImg.alt = imgAlt;
             modal.classList.remove('hidden');
-            // Thêm class scale-100 sau khi hiển thị để có hiệu ứng chuyển động mượt
+            
+            // Kích hoạt animation mượt mà
             setTimeout(() => {
                 modalImg.classList.remove('scale-95');
                 modalImg.classList.add('scale-100');
             }, 50);
-            document.body.classList.add('overflow-hidden'); // Khóa cuộn trang khi đang xem ảnh
+            
+            // Khóa cuộn trang nền để tăng trải nghiệm xem ảnh tập trung
+            document.body.classList.add('overflow-hidden');
         }
 
         function closeImageModal(event) {
@@ -301,13 +348,16 @@
             const modalImg = document.getElementById('modal-img');
             modalImg.classList.remove('scale-100');
             modalImg.classList.add('scale-95');
+            
             setTimeout(() => {
                 modal.classList.add('hidden');
             }, 200);
-            document.body.classList.remove('overflow-hidden'); // Mở khóa cuộn trang
+            
+            // Mở lại cuộn trang như bình thường
+            document.body.classList.remove('overflow-hidden');
         }
 
-        // Chạy hàm khi trang web tải xong
+        // Chạy hàm render khi cấu trúc trang tải hoàn tất
         window.onload = function() {
             renderProducts(danhSachQuatTran, 'list-quat-tran');
             renderProducts(danhSachDenOpTran, 'list-den-op-tran');
