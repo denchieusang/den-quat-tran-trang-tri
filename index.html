@@ -55,24 +55,76 @@
         </div>
     </section>
 
-    <!-- THANH DANH MỤC CUỘN NGANG (Cực kỳ tiện lợi trên điện thoại) -->
-    <div class="sticky top-[52px] sm:top-[60px] bg-amber-50 border-b border-amber-100 z-40 shadow-sm">
-        <div class="container mx-auto px-2 py-2.5 overflow-x-auto no-scrollbar flex space-x-2 sm:space-x-3 whitespace-nowrap">
-            <a href="#quat-tran" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Quạt Trần</a>
-            <a href="#den-op-tran" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Ốp Hiện Đại</a>
-            <a href="#den-op-hop-kim" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Ốp Hợp Kim</a>
-            <a href="#den-chum" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Chùm</a>
-            <a href="#den-tuong-hien-dai" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Tường Hiện Đại</a>
-            <a href="#den-tuong-ngu" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Tường Ngủ</a>
-            <a href="#den-tru-cong" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Trụ Cổng</a>
-            <a href="#den-pha-220v" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Pha 220V</a>
-            <a href="#den-pha-nlmt" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Pha NLMT</a>
-            <a href="#den-san-vuon" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Sân Vườn</a>
+    <!-- BẢNG ĐIỀU HƯỚNG CỐ ĐỊNH 2 DÒNG TRÊN ĐẦU WEB -->
+    <section class="sticky top-[52px] sm:top-[60px] bg-amber-50/95 backdrop-blur-md py-1.5 px-2 border-b border-amber-100 z-40 shadow-md">
+        <div class="container mx-auto">
+            <!-- Lưới grid cố định 5 cột trên mọi thiết bị để luôn hiển thị chính xác thành 2 dòng (10 danh mục / 5 = 2 dòng) -->
+            <div class="grid grid-cols-5 gap-1 max-w-4xl mx-auto">
+                <!-- 1. Quạt trần -->
+                <a href="#quat-tran" class="group flex flex-col items-center justify-center bg-white hover:bg-amber-600 hover:text-white text-gray-700 py-1 px-0.5 rounded border border-amber-100/50 shadow-2xs hover:shadow-sm transition duration-150">
+                    <i class="fa-solid fa-fan text-[10px] sm:text-xs mb-0.5 text-amber-600 group-hover:text-white transition-colors"></i>
+                    <span class="text-[8px] sm:text-[10px] font-semibold text-center truncate w-full">Quạt Trần</span>
+                </a>
+                
+                <!-- 2. Đèn Ốp Hiện Đại -->
+                <a href="#den-op-tran" class="group flex flex-col items-center justify-center bg-white hover:bg-amber-600 hover:text-white text-gray-700 py-1 px-0.5 rounded border border-amber-100/50 shadow-2xs hover:shadow-sm transition duration-150">
+                    <i class="fa-solid fa-circle-notch text-[10px] sm:text-xs mb-0.5 text-amber-600 group-hover:text-white transition-colors"></i>
+                    <span class="text-[8px] sm:text-[10px] font-semibold text-center truncate w-full" title="Đèn Ốp Hiện Đại">Đèn Ốp HD</span>
+                </a>
+                
+                <!-- 3. Đèn Ốp Hợp Kim -->
+                <a href="#den-op-hop-kim" class="group flex flex-col items-center justify-center bg-white hover:bg-amber-600 hover:text-white text-gray-700 py-1 px-0.5 rounded border border-amber-100/50 shadow-2xs hover:shadow-sm transition duration-150">
+                    <i class="fa-solid fa-cubes text-[10px] sm:text-xs mb-0.5 text-amber-600 group-hover:text-white transition-colors"></i>
+                    <span class="text-[8px] sm:text-[10px] font-semibold text-center truncate w-full" title="Đèn Ốp Hợp Kim">Ốp Hợp Kim</span>
+                </a>
+                
+                <!-- 4. Đèn Chùm -->
+                <a href="#den-chum" class="group flex flex-col items-center justify-center bg-white hover:bg-amber-600 hover:text-white text-gray-700 py-1 px-0.5 rounded border border-amber-100/50 shadow-2xs hover:shadow-sm transition duration-150">
+                    <i class="fa-solid fa-crown text-[10px] sm:text-xs mb-0.5 text-amber-600 group-hover:text-white transition-colors"></i>
+                    <span class="text-[8px] sm:text-[10px] font-semibold text-center truncate w-full">Đèn Chùm</span>
+                </a>
+                
+                <!-- 5. Đèn Tường Hiện Đại -->
+                <a href="#den-tuong-hien-dai" class="group flex flex-col items-center justify-center bg-white hover:bg-amber-600 hover:text-white text-gray-700 py-1 px-0.5 rounded border border-amber-100/50 shadow-2xs hover:shadow-sm transition duration-150">
+                    <i class="fa-solid fa-grip-vertical text-[10px] sm:text-xs mb-0.5 text-amber-600 group-hover:text-white transition-colors"></i>
+                    <span class="text-[8px] sm:text-[10px] font-semibold text-center truncate w-full" title="Đèn Tường Hiện Đại">Tường HD</span>
+                </a>
+                
+                <!-- 6. Đèn Tường Ngủ -->
+                <a href="#den-tuong-ngu" class="group flex flex-col items-center justify-center bg-white hover:bg-amber-600 hover:text-white text-gray-700 py-1 px-0.5 rounded border border-amber-100/50 shadow-2xs hover:shadow-sm transition duration-150">
+                    <i class="fa-solid fa-bed text-[10px] sm:text-xs mb-0.5 text-amber-600 group-hover:text-white transition-colors"></i>
+                    <span class="text-[8px] sm:text-[10px] font-semibold text-center truncate w-full" title="Đèn Tường Phòng Ngủ">Tường Ngủ</span>
+                </a>
+                
+                <!-- 7. Đèn Trụ Cổng -->
+                <a href="#den-tru-cong" class="group flex flex-col items-center justify-center bg-white hover:bg-amber-600 hover:text-white text-gray-700 py-1 px-0.5 rounded border border-amber-100/50 shadow-2xs hover:shadow-sm transition duration-150">
+                    <i class="fa-solid fa-archway text-[10px] sm:text-xs mb-0.5 text-amber-600 group-hover:text-white transition-colors"></i>
+                    <span class="text-[8px] sm:text-[10px] font-semibold text-center truncate w-full">Trụ Cổng</span>
+                </a>
+                
+                <!-- 8. Đèn Pha 220V -->
+                <a href="#den-pha-220v" class="group flex flex-col items-center justify-center bg-white hover:bg-amber-600 hover:text-white text-gray-700 py-1 px-0.5 rounded border border-amber-100/50 shadow-2xs hover:shadow-sm transition duration-150">
+                    <i class="fa-solid fa-bolt-lightning text-[10px] sm:text-xs mb-0.5 text-amber-600 group-hover:text-white transition-colors"></i>
+                    <span class="text-[8px] sm:text-[10px] font-semibold text-center truncate w-full">Pha 220V</span>
+                </a>
+                
+                <!-- 9. Đèn Pha NLMT -->
+                <a href="#den-pha-nlmt" class="group flex flex-col items-center justify-center bg-white hover:bg-amber-600 hover:text-white text-gray-700 py-1 px-0.5 rounded border border-amber-100/50 shadow-2xs hover:shadow-sm transition duration-150">
+                    <i class="fa-solid fa-solar-panel text-[10px] sm:text-xs mb-0.5 text-amber-600 group-hover:text-white transition-colors"></i>
+                    <span class="text-[8px] sm:text-[10px] font-semibold text-center truncate w-full" title="Pha Năng Lượng Mặt Trời">Pha NLMT</span>
+                </a>
+                
+                <!-- 10. Đèn Sân Vườn -->
+                <a href="#den-san-vuon" class="group flex flex-col items-center justify-center bg-white hover:bg-amber-600 hover:text-white text-gray-700 py-1 px-0.5 rounded border border-amber-100/50 shadow-2xs hover:shadow-sm transition duration-150">
+                    <i class="fa-solid fa-tree text-[10px] sm:text-xs mb-0.5 text-amber-600 group-hover:text-white transition-colors"></i>
+                    <span class="text-[8px] sm:text-[10px] font-semibold text-center truncate w-full">Sân Vườn</span>
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- 1. Danh mục Quạt Trần -->
-    <section id="quat-tran" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-28">
+    <section id="quat-tran" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-[125px] sm:scroll-mt-[140px]">
         <div class="flex items-end justify-between mb-6 border-b pb-2">
             <div>
                 <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Quạt Trần Trang Trí</h2>
@@ -84,7 +136,7 @@
     </section>
 
     <!-- 2. Danh mục Đèn Ốp Trần Hiện Đại -->
-    <section id="den-op-tran" class="py-10 bg-white border-y border-gray-100 scroll-mt-28">
+    <section id="den-op-tran" class="py-10 bg-white border-y border-gray-100 scroll-mt-[125px] sm:scroll-mt-[140px]">
         <div class="container mx-auto px-2 sm:px-4">
             <div class="flex items-end justify-between mb-6 border-b pb-2">
                 <div>
@@ -98,7 +150,7 @@
     </section>
 
     <!-- 3. Danh mục Đèn Ốp Trần Hợp Kim -->
-    <section id="den-op-hop-kim" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-28">
+    <section id="den-op-hop-kim" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-[125px] sm:scroll-mt-[140px]">
         <div class="flex items-end justify-between mb-6 border-b pb-2">
             <div>
                 <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Đèn Ốp Trần Hợp Kim</h2>
@@ -110,7 +162,7 @@
     </section>
 
     <!-- 4. Danh mục Đèn Chùm -->
-    <section id="den-chum" class="py-10 bg-white border-y border-gray-100 scroll-mt-28">
+    <section id="den-chum" class="py-10 bg-white border-y border-gray-100 scroll-mt-[125px] sm:scroll-mt-[140px]">
         <div class="container mx-auto px-2 sm:px-4">
             <div class="flex items-end justify-between mb-6 border-b pb-2">
                 <div>
@@ -124,7 +176,7 @@
     </section>
 
     <!-- 5. Danh mục Đèn Tường Hiện Đại -->
-    <section id="den-tuong-hien-dai" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-28">
+    <section id="den-tuong-hien-dai" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-[125px] sm:scroll-mt-[140px]">
         <div class="flex items-end justify-between mb-6 border-b pb-2">
             <div>
                 <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Đèn Tường Hiện Đại</h2>
@@ -136,7 +188,7 @@
     </section>
 
     <!-- 6. Danh mục Đèn Tường Ngủ -->
-    <section id="den-tuong-ngu" class="py-10 bg-white border-y border-gray-100 scroll-mt-28">
+    <section id="den-tuong-ngu" class="py-10 bg-white border-y border-gray-100 scroll-mt-[125px] sm:scroll-mt-[140px]">
         <div class="container mx-auto px-2 sm:px-4">
             <div class="flex items-end justify-between mb-6 border-b pb-2">
                 <div>
@@ -150,7 +202,7 @@
     </section>
 
     <!-- 7. Danh mục Đèn Trụ Cổng -->
-    <section id="den-tru-cong" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-28">
+    <section id="den-tru-cong" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-[125px] sm:scroll-mt-[140px]">
         <div class="flex items-end justify-between mb-6 border-b pb-2">
             <div>
                 <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Đèn Trụ Cổng</h2>
@@ -162,7 +214,7 @@
     </section>
 
     <!-- 8. Danh mục Đèn Pha 220V -->
-    <section id="den-pha-220v" class="py-10 bg-white border-y border-gray-100 scroll-mt-28">
+    <section id="den-pha-220v" class="py-10 bg-white border-y border-gray-100 scroll-mt-[125px] sm:scroll-mt-[140px]">
         <div class="container mx-auto px-2 sm:px-4">
             <div class="flex items-end justify-between mb-6 border-b pb-2">
                 <div>
@@ -176,7 +228,7 @@
     </section>
 
     <!-- 9. Danh mục Đèn Pha NLMT -->
-    <section id="den-pha-nlmt" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-28">
+    <section id="den-pha-nlmt" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-[125px] sm:scroll-mt-[140px]">
         <div class="flex items-end justify-between mb-6 border-b pb-2">
             <div>
                 <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Đèn Pha Năng Lượng Mặt Trời</h2>
@@ -188,7 +240,7 @@
     </section>
 
     <!-- 10. Danh mục Đèn Sân Vườn -->
-    <section id="den-san-vuon" class="py-10 bg-white border-y border-gray-100 scroll-mt-28">
+    <section id="den-san-vuon" class="py-10 bg-white border-y border-gray-100 scroll-mt-[125px] sm:scroll-mt-[140px]">
         <div class="container mx-auto px-2 sm:px-4">
             <div class="flex items-end justify-between mb-6 border-b pb-2">
                 <div>
@@ -233,7 +285,7 @@
     <script>
         // 1. Quạt trần
         const danhSachQuatTran = [
-             { file: "quat-tran-1 (1).jpg", ten: "Quạt trần 1", ma: "QT-001" },
+                     { file: "quat-tran-1 (1).jpg", ten: "Quạt trần 1", ma: "QT-001" },
 { file: "quat-tran-1 (2).jpg", ten: "Quạt trần 2", ma: "QT-002" },
 { file: "quat-tran-1 (3).jpg", ten: "Quạt trần 3", ma: "QT-003" },
 { file: "quat-tran-1 (4).jpg", ten: "Quạt trần 4", ma: "QT-004" },
@@ -359,7 +411,7 @@
 
         // 3. Đèn ốp trần hợp kim
         const danhSachDenOpHopKim = [
-           { file: "den-op-tran-trang-tri-noi-that-a01.jpg", ten: "Ốp Hợp Kim A01", ma: "A01" },
+            { file: "den-op-tran-trang-tri-noi-that-a01.jpg", ten: "Ốp Hợp Kim A01", ma: "A01" },
 { file: "den-op-tran-trang-tri-noi-that-a02.jpg", ten: "Ốp Hợp Kim A02", ma: "A02" },
 { file: "den-op-tran-trang-tri-noi-that-a03.jpg", ten: "Ốp Hợp Kim A03", ma: "A03" },
 { file: "den-op-tran-trang-tri-noi-that-a04.jpg", ten: "Ốp Hợp Kim A04", ma: "A04" },
