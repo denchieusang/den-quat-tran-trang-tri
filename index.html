@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumiere - Đèn & Quạt Trần Trang Trí Cao Cấp</title>
+    <title>Lumiere - Hệ Thống Đèn & Quạt Trần Trang Trí Cao Cấp</title>
     <!-- Nhúng Tailwind CSS để dựng giao diện nhanh và chuẩn responsive -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Nhúng Google Fonts hỗ trợ hiển thị tiếng Việt mượt mà -->
@@ -19,86 +19,189 @@
         html { scroll-behavior: smooth; }
         /* Tối ưu hóa việc không hiển thị thanh cuộn ngang ngoài ý muốn */
         body { overflow-x: hidden; }
+        /* Ẩn thanh cuộn của trình duyệt đối với thanh danh mục cuộn ngang */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
     <script>
-        // Số điện thoại của bạn, thay đổi một lần ở đây sẽ tự động cập nhật toàn trang web
+        // Số điện thoại liên hệ của bạn, thay đổi một lần ở đây sẽ tự động cập nhật toàn trang web
         const SO_DIEN_THOAI = "0896581688"; 
     </script>
 
-    <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50">
         <div class="container mx-auto px-2 sm:px-4 py-3 flex justify-between items-center">
             <!-- Logo thương hiệu -->
             <a href="#" class="text-xl sm:text-2xl font-serif font-bold text-amber-600">LUMIERE.</a>
-            <!-- Menu nhanh cho máy tính -->
-            <nav class="hidden md:flex space-x-6 lg:space-x-8 font-medium text-sm lg:text-base">
-                <a href="#quat-tran" class="hover:text-amber-600 transition">Quạt Trần</a>
-                <a href="#den-op-tran" class="hover:text-amber-600 transition">Đèn Ốp Trần</a>
-                <a href="#den-chum" class="hover:text-amber-600 transition">Đèn Chùm</a>
-            </nav>
-            <!-- Nút gọi ngay phản hồi nhanh -->
+            
+            <!-- Điện thoại liên hệ trên Header -->
             <a href="tel:0896581688" class="bg-amber-600 text-white px-3 py-1.5 sm:px-5 sm:py-2 rounded-full text-xs sm:text-sm font-bold hover:bg-amber-700 transition flex items-center gap-1 sm:gap-2 shadow-md">
                 <i class="fa-solid fa-phone animate-pulse"></i> 
-                <span class="hidden xs:inline">Gọi ngay:</span> 0896.581.688
+                <span>Hotline: 0896.581.688</span>
             </a>
         </div>
     </header>
 
-    <section class="h-[350px] sm:h-[450px] md:h-[500px] flex items-center justify-center relative overflow-hidden pt-12">
+    <!-- Banner -->
+    <section class="h-[280px] sm:h-[400px] flex items-center justify-center relative overflow-hidden pt-12">
         <div class="absolute inset-0 bg-black/40 z-10"></div>
         <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Banner Lumiere">
         <div class="relative z-20 text-center text-white px-4 max-w-3xl">
-            <h1 class="text-3xl sm:text-4xl md:text-6xl font-serif mb-3 font-bold leading-tight">Ánh Sáng Nghệ Thuật</h1>
-            <p class="text-sm sm:text-base md:text-xl opacity-90 font-light tracking-wide">Nâng tầm đẳng cấp và khơi nguồn sinh khí cho ngôi nhà của bạn</p>
+            <h1 class="text-2xl sm:text-4xl md:text-5xl font-serif mb-2 font-bold leading-tight">Ánh Sáng & Gió Nghệ Thuật</h1>
+            <p class="text-xs sm:text-sm md:text-lg opacity-90 font-light tracking-wide">Giải pháp chiếu sáng & làm mát đẳng cấp cho ngôi nhà Việt</p>
         </div>
     </section>
 
-    <section id="quat-tran" class="py-12 container mx-auto px-2 sm:px-4">
-        <div class="flex items-end justify-between mb-8 border-b pb-3">
+    <!-- THANH DANH MỤC CUỘN NGANG (Cực kỳ tiện lợi trên điện thoại) -->
+    <div class="sticky top-[52px] sm:top-[60px] bg-amber-50 border-b border-amber-100 z-40 shadow-sm">
+        <div class="container mx-auto px-2 py-2.5 overflow-x-auto no-scrollbar flex space-x-2 sm:space-x-3 whitespace-nowrap">
+            <a href="#quat-tran" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Quạt Trần</a>
+            <a href="#den-op-tran" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Ốp Hiện Đại</a>
+            <a href="#den-op-hop-kim" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Ốp Hợp Kim</a>
+            <a href="#den-chum" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Chùm</a>
+            <a href="#den-tuong-hien-dai" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Tường Hiện Đại</a>
+            <a href="#den-tuong-ngu" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Tường Ngủ</a>
+            <a href="#den-tru-cong" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Trụ Cổng</a>
+            <a href="#den-pha-220v" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Pha 220V</a>
+            <a href="#den-pha-nlmt" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Pha NLMT</a>
+            <a href="#den-san-vuon" class="bg-white text-gray-700 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-xs border border-amber-100/50 transition">Đèn Sân Vườn</a>
+        </div>
+    </div>
+
+    <!-- 1. Danh mục Quạt Trần -->
+    <section id="quat-tran" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-28">
+        <div class="flex items-end justify-between mb-6 border-b pb-2">
             <div>
-                <h2 class="text-lg sm:text-2xl md:text-3xl font-serif font-bold text-gray-900">Quạt Trần Trang Trí</h2>
-                <p class="text-[10px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-1">Premium Ceiling Fans</p>
+                <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Quạt Trần Trang Trí</h2>
+                <p class="text-[9px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-0.5">Ceiling Fans</p>
             </div>
-            <span class="text-[9px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded">Hàng Sẵn Có</span>
+            <span class="text-[8px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded">Hàng Sẵn Có</span>
         </div>
-        <!-- Lưới 4 cột trên cả di động (grid-cols-4) -->
-        <div id="list-quat-tran" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6 lg:gap-8">
-            <!-- Sản phẩm sẽ tự động render bằng JavaScript -->
-        </div>
+        <div id="list-quat-tran" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6"></div>
     </section>
 
-    <section id="den-op-tran" class="py-12 bg-white border-y border-gray-100">
+    <!-- 2. Danh mục Đèn Ốp Trần Hiện Đại -->
+    <section id="den-op-tran" class="py-10 bg-white border-y border-gray-100 scroll-mt-28">
         <div class="container mx-auto px-2 sm:px-4">
-            <div class="flex items-end justify-between mb-8 border-b pb-3">
+            <div class="flex items-end justify-between mb-6 border-b pb-2">
                 <div>
-                    <h2 class="text-lg sm:text-2xl md:text-3xl font-serif font-bold text-gray-900">Đèn Ốp Trần Hiện Đại</h2>
-                    <p class="text-[10px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-1">Ceiling Lights</p>
+                    <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Đèn Ốp Trần Hiện Đại</h2>
+                    <p class="text-[9px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-0.5">Ceiling Lights</p>
                 </div>
-                <span class="text-[9px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded">Bảo Hành 2 Năm</span>
+                <span class="text-[8px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded">Bảo Hành 2 Năm</span>
             </div>
-            <!-- Lưới 4 cột trên cả di động (grid-cols-4) -->
-            <div id="list-den-op-tran" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6 lg:gap-8">
-                <!-- Sản phẩm sẽ tự động render bằng JavaScript -->
-            </div>
+            <div id="list-den-op-tran" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6"></div>
         </div>
     </section>
 
-    <section id="den-chum" class="py-12 container mx-auto px-2 sm:px-4">
-        <div class="flex items-end justify-between mb-8 border-b pb-3">
+    <!-- 3. Danh mục Đèn Ốp Trần Hợp Kim -->
+    <section id="den-op-hop-kim" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-28">
+        <div class="flex items-end justify-between mb-6 border-b pb-2">
             <div>
-                <h2 class="text-lg sm:text-2xl md:text-3xl font-serif font-bold text-gray-900">Đèn Chùm Sang Trọng</h2>
-                <p class="text-[10px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-1">Luxury Chandeliers</p>
+                <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Đèn Ốp Trần Hợp Kim</h2>
+                <p class="text-[9px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-0.5">Alloy Ceiling Lights</p>
             </div>
-            <span class="text-[9px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded">Nhập Khẩu Cao Cấp</span>
+            <span class="text-[8px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded">Siêu Bền</span>
         </div>
-        <!-- Lưới 4 cột trên cả di động (grid-cols-4) -->
-        <div id="list-den-chum" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6 lg:gap-8">
-            <!-- Sản phẩm sẽ tự động render bằng JavaScript -->
+        <div id="list-den-op-hop-kim" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6"></div>
+    </section>
+
+    <!-- 4. Danh mục Đèn Chùm -->
+    <section id="den-chum" class="py-10 bg-white border-y border-gray-100 scroll-mt-28">
+        <div class="container mx-auto px-2 sm:px-4">
+            <div class="flex items-end justify-between mb-6 border-b pb-2">
+                <div>
+                    <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Đèn Chùm Sang Trọng</h2>
+                    <p class="text-[9px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-0.5">Luxury Chandeliers</p>
+                </div>
+                <span class="text-[8px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded">Châu Âu</span>
+            </div>
+            <div id="list-den-chum" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6"></div>
         </div>
     </section>
 
+    <!-- 5. Danh mục Đèn Tường Hiện Đại -->
+    <section id="den-tuong-hien-dai" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-28">
+        <div class="flex items-end justify-between mb-6 border-b pb-2">
+            <div>
+                <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Đèn Tường Hiện Đại</h2>
+                <p class="text-[9px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-0.5">Modern Wall Lights</p>
+            </div>
+            <span class="text-[8px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded">Tinh Tế</span>
+        </div>
+        <div id="list-den-tuong-hien-dai" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6"></div>
+    </section>
+
+    <!-- 6. Danh mục Đèn Tường Ngủ -->
+    <section id="den-tuong-ngu" class="py-10 bg-white border-y border-gray-100 scroll-mt-28">
+        <div class="container mx-auto px-2 sm:px-4">
+            <div class="flex items-end justify-between mb-6 border-b pb-2">
+                <div>
+                    <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Đèn Tường Ngủ</h2>
+                    <p class="text-[9px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-0.5">Bedroom Wall Lights</p>
+                </div>
+                <span class="text-[8px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded">Ấm Áp</span>
+            </div>
+            <div id="list-den-tuong-ngu" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6"></div>
+        </div>
+    </section>
+
+    <!-- 7. Danh mục Đèn Trụ Cổng -->
+    <section id="den-tru-cong" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-28">
+        <div class="flex items-end justify-between mb-6 border-b pb-2">
+            <div>
+                <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Đèn Trụ Cổng</h2>
+                <p class="text-[9px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-0.5">Pillar Lights</p>
+            </div>
+            <span class="text-[8px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded">Chống Nước IP65</span>
+        </div>
+        <div id="list-den-tru-cong" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6"></div>
+    </section>
+
+    <!-- 8. Danh mục Đèn Pha 220V -->
+    <section id="den-pha-220v" class="py-10 bg-white border-y border-gray-100 scroll-mt-28">
+        <div class="container mx-auto px-2 sm:px-4">
+            <div class="flex items-end justify-between mb-6 border-b pb-2">
+                <div>
+                    <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Đèn Pha Led 220V</h2>
+                    <p class="text-[9px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-0.5">220V Floodlights</p>
+                </div>
+                <span class="text-[8px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded">Siêu Sáng</span>
+            </div>
+            <div id="list-den-pha-220v" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6"></div>
+        </div>
+    </section>
+
+    <!-- 9. Danh mục Đèn Pha NLMT -->
+    <section id="den-pha-nlmt" class="py-10 container mx-auto px-2 sm:px-4 scroll-mt-28">
+        <div class="flex items-end justify-between mb-6 border-b pb-2">
+            <div>
+                <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Đèn Pha Năng Lượng Mặt Trời</h2>
+                <p class="text-[9px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-0.5">Solar Floodlights</p>
+            </div>
+            <span class="text-[8px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded">Tiết Kiệm Điện</span>
+        </div>
+        <div id="list-den-pha-nlmt" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6"></div>
+    </section>
+
+    <!-- 10. Danh mục Đèn Sân Vườn -->
+    <section id="den-san-vuon" class="py-10 bg-white border-y border-gray-100 scroll-mt-28">
+        <div class="container mx-auto px-2 sm:px-4">
+            <div class="flex items-end justify-between mb-6 border-b pb-2">
+                <div>
+                    <h2 class="text-base sm:text-xl md:text-2xl font-serif font-bold text-gray-900">Đèn Sân Vườn Cảnh Quan</h2>
+                    <p class="text-[9px] sm:text-xs text-amber-600 font-semibold tracking-wider uppercase mt-0.5">Garden Lights</p>
+                </div>
+                <span class="text-[8px] sm:text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded">Mỹ Thuật Ngoại Thất</span>
+            </div>
+            <div id="list-den-san-vuon" class="grid grid-cols-4 gap-1.5 sm:gap-4 md:gap-6"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
         <div class="container mx-auto px-4 text-center">
             <p class="text-2xl font-serif font-bold text-white mb-2 tracking-widest">LUMIERE LIGHTING</p>
@@ -118,17 +221,17 @@
         </div>
     </footer>
 
+    <!-- LIGHTBOX MODAL PHÓNG TO -->
     <div id="image-modal" class="fixed inset-0 bg-black/95 z-[100] hidden flex items-center justify-center p-2 cursor-zoom-out" onclick="closeImageModal()">
-        <!-- Nút đóng góc phải -->
         <button class="absolute top-4 right-4 text-white text-3xl hover:text-amber-500 transition duration-300 focus:outline-none" onclick="closeImageModal(event)">
             <i class="fa-solid fa-xmark"></i>
         </button>
-        <!-- Thẻ ảnh hiển thị lớn -->
         <img id="modal-img" src="" alt="Zoomed Image" class="max-w-full max-h-[92vh] object-contain rounded-lg shadow-2xl transition-all duration-300 transform scale-95" onclick="event.stopPropagation()">
     </div>
 
+    <!-- JAVASCRIPT QUẢN LÝ DỮ LIỆU SẢN PHẨM -->
     <script>
-        // Danh sách Quạt trần (Bỏ hoàn toàn thuộc tính 'sao' để bạn dễ quản lý ảnh)
+        // 1. Quạt trần
         const danhSachQuatTran = [
              { file: "quat-tran-1 (1).jpg", ten: "Quạt trần 1", ma: "QT-001" },
 { file: "quat-tran-1 (2).jpg", ten: "Quạt trần 2", ma: "QT-002" },
@@ -246,7 +349,7 @@
 { file: "quat-tran-1 (114).jpg", ten: "Quạt trần 114", ma: "QT-114" },
         ];
 
-        // Danh sách Đèn ốp trần
+        // 2. Đèn ốp trần hiện đại
         const danhSachDenOpTran = [
             { file: "den-op-1.jpg", ten: "Đèn Mâm Ốp Trần Pha Lê", ma: "OT-001" },
             { file: "den-op-2.jpg", ten: "Đèn Ốp Hiện Đại Chung Cư", ma: "OT-002" },
@@ -254,7 +357,15 @@
             { file: "den-op-4.jpg", ten: "Đèn Ốp Thủy Tinh Nghệ Thuật", ma: "OT-004" }
         ];
 
-        // Danh sách Đèn chùm
+        // 3. Đèn ốp trần hợp kim
+        const danhSachDenOpHopKim = [
+            { file: "den-op-hop-kim-1.jpg", ten: "Đèn Ốp Hợp Kim Tròn Tối Giản", ma: "HK-001" },
+            { file: "den-op-hop-kim-2.jpg", ten: "Đèn Ốp Hợp Kim Vuông Cao Cấp", ma: "HK-002" },
+            { file: "den-op-hop-kim-3.jpg", ten: "Đèn Ốp Hợp Kim Thiết Kế Ý", ma: "HK-003" },
+            { file: "den-op-hop-kim-4.jpg", ten: "Đèn Ốp Hợp Kim Nghệ Thuật Độc Đáo", ma: "HK-004" }
+        ];
+
+        // 4. Đèn chùm
         const danhSachDenChum = [
             { file: "den-chum-1.jpg", ten: "Đèn Chùm Pha Lê K9", ma: "DC-001" },
             { file: "den-chum-2.jpg", ten: "Đèn Chùm Nến Cổ Điển", ma: "DC-002" },
@@ -262,15 +373,64 @@
             { file: "den-chum-4.jpg", ten: "Đèn Chùm Hiện Đại Bắc Âu", ma: "DC-004" }
         ];
 
+        // 5. Đèn tường hiện đại
+        const danhSachDenTuongHienDai = [
+            { file: "den-tuong-hd-1.jpg", ten: "Đèn Tường Led Decor Hiện Đại", ma: "THD-001" },
+            { file: "den-tuong-hd-2.jpg", ten: "Đèn Tường Hắt Ánh Sáng Nghệ Thuật", ma: "THD-002" },
+            { file: "den-tuong-hd-3.jpg", ten: "Đèn Tường Kim Loại Sơn Tĩnh Điện", ma: "THD-003" },
+            { file: "den-tuong-hd-4.jpg", ten: "Đèn Tường Acrylic Sang Trọng", ma: "THD-004" }
+        ];
+
+        // 6. Đèn tường ngủ
+        const danhSachDenTuongNgu = [
+            { file: "den-tuong-ngu-1.jpg", ten: "Đèn Tường Phòng Ngủ Ánh Sáng Ấm", ma: "DTN-001" },
+            { file: "den-tuong-ngu-2.jpg", ten: "Đèn Tường Gỗ Nhật Bản Zen", ma: "DTN-002" },
+            { file: "den-tuong-ngu-3.jpg", ten: "Đèn Đọc Sách Đầu Giường Tiện Lợi", ma: "DTN-003" },
+            { file: "den-tuong-ngu-4.jpg", ten: "Đèn Ngủ Gắn Tường Silicon Mềm", ma: "DTN-004" }
+        ];
+
+        // 7. Đèn trụ cổng
+        const danhSachTruCong = [
+            { file: "tru-cong-1.jpg", ten: "Đèn Trụ Cổng Đồng Cổ Điển", ma: "TC-001" },
+            { file: "tru-cong-2.jpg", ten: "Đèn Trụ Cổng Led Năng Lượng Mặt Trời", ma: "TC-002" },
+            { file: "tru-cong-3.jpg", ten: "Đèn Trụ Cổng Hiện Đại Chống Nước", ma: "TC-003" },
+            { file: "tru-cong-4.jpg", ten: "Đèn Trụ Cổng Sân Biệt Thự", ma: "TC-004" }
+        ];
+
+        // 8. Đèn pha 220V
+        const danhSachDenPha220v = [
+            { file: "den-pha-220v-1.jpg", ten: "Đèn Pha Led COB 220V Outdoor", ma: "P220V-001" },
+            { file: "den-pha-220v-2.jpg", ten: "Đèn Pha Led Siêu Sáng 50W", ma: "P220V-002" },
+            { file: "den-pha-220v-3.jpg", ten: "Đèn Pha Led Chiếu Biển Quảng Cáo", ma: "P220V-003" },
+            { file: "den-pha-220v-4.jpg", ten: "Đèn Pha Cao Áp Sân Thể Thao", ma: "P220V-004" }
+        ];
+
+        // 9. Đèn pha NLMT
+        const danhSachDenPhaNLMT = [
+            { file: "den-pha-nlmt-1.jpg", ten: "Đèn Pha Năng Lượng Mặt Trời 100W", ma: "PNLMT-001" },
+            { file: "den-pha-nlmt-2.jpg", ten: "Đèn Pha NLMT Có Thể Cầm Tay", ma: "PNLMT-002" },
+            { file: "den-pha-nlmt-3.jpg", ten: "Đèn Pha Solar Light IP67 Cao Cấp", ma: "PNLMT-003" },
+            { file: "den-pha-nlmt-4.jpg", ten: "Bộ Đèn Pha NLMT Cảm Biến Ánh Sáng", ma: "PNLMT-004" }
+        ];
+
+        // 10. Đèn sân vườn
+        const danhSachDenSanVuon = [
+            { file: "den-san-vuon-1.jpg", ten: "Đèn Trụ Sân Vườn Thấp Lối Đi", ma: "SV-001" },
+            { file: "den-san-vuon-2.jpg", ten: "Đèn Cắm Cỏ Điểm Nhấn Sân Vườn", ma: "SV-002" },
+            { file: "den-san-vuon-3.jpg", ten: "Đèn Đá Sân Vườn Nhật Bản", ma: "SV-003" },
+            { file: "den-san-vuon-4.jpg", ten: "Đèn Treo Cành Cây Sân Vườn Độc Đáo", ma: "SV-004" }
+        ];
+
         function renderProducts(list, containerId) {
             const container = document.getElementById(containerId);
+            if (!container) return;
             let html = "";
 
             list.forEach(item => {
-                // Tự động gán ngẫu nhiên 4.5 hoặc 5 sao cho mỗi sản phẩm mới nhập
+                // Tự động gán ngẫu nhiên 4.5 hoặc 5 sao
                 const rating = Math.random() < 0.5 ? 4.5 : 5;
                 
-                // Tạo ngôi sao vàng tự động xử lý cả nửa sao (Ví dụ: 4.5 sao)
+                // Tạo cấu trúc ngôi sao tự động xử lý cả nửa sao (Ví dụ: 4.5 sao)
                 let stars = "";
                 for (let i = 1; i <= 5; i++) {
                     if (rating >= i) {
@@ -284,18 +444,18 @@
 
                 html += `
                     <div class="product-card bg-white rounded-md sm:rounded-xl shadow-xs sm:shadow-sm border border-gray-100 overflow-hidden transition duration-300 flex flex-col justify-between h-full">
-                        <!-- Vùng chứa ảnh tối ưu kích thước tỉ lệ vuông và hỗ trợ click zoom ảnh -->
+                        <!-- Khung ảnh tỉ lệ vuông 1:1, click để mở Lightbox zoom ảnh -->
                         <div class="aspect-square w-full overflow-hidden bg-gray-50 cursor-zoom-in relative group" onclick="openImageModal('${item.file}', '${item.ten}')" title="Bấm để xem ảnh phóng to">
                             <img src="${item.file}" alt="${item.ten}" 
                                  class="product-img w-full h-full object-cover"
                                  onerror="this.src='https://placehold.co/400x400/f5f5f5/c0a080?text=Lumiere+Lighting'">
-                            <!-- Nhãn chỉ thị xem nhanh góc ảnh -->
+                            <!-- Nhãn xem nhanh khi hover -->
                             <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                                 <span class="bg-black/60 text-white text-[9px] px-1.5 py-0.5 rounded-full hidden sm:inline-block"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Xem ảnh</span>
                             </div>
                         </div>
                         
-                        <!-- Vùng chứa thông tin nhỏ gọn thích ứng màn hình hẹp -->
+                        <!-- Chi tiết sản phẩm -->
                         <div class="p-1 sm:p-3 flex flex-col justify-between flex-grow">
                             <div>
                                 <p class="text-[8px] sm:text-[10px] text-gray-400 font-mono mb-0.5">Mã: ${item.ma}</p>
@@ -308,7 +468,7 @@
                                 </div>
                             </div>
                             
-                            <!-- Nút hành động gọi trực tiếp cho khách hàng -->
+                            <!-- Nút Liên hệ & nút Gọi trực tiếp -->
                             <div class="border-t pt-1.5 flex items-center justify-between gap-1 mt-auto">
                                 <a href="tel:${SO_DIEN_THOAI}" class="text-amber-600 font-bold text-[9px] sm:text-xs hover:text-amber-700 truncate">
                                     Giá: <span class="underline">Liên hệ</span>
@@ -324,7 +484,7 @@
             container.innerHTML = html;
         }
 
-        // --- CÁC HÀM XỬ LÝ SỰ KIỆN LIGHTBOX MODAL PHÓNG TO ---
+        // --- CÁC HÀM XỬ LÝ SỰ KIỆN LIGHTBOX MODAL ---
         function openImageModal(imgSrc, imgAlt) {
             const modal = document.getElementById('image-modal');
             const modalImg = document.getElementById('modal-img');
@@ -332,13 +492,11 @@
             modalImg.alt = imgAlt;
             modal.classList.remove('hidden');
             
-            // Kích hoạt animation mượt mà
             setTimeout(() => {
                 modalImg.classList.remove('scale-95');
                 modalImg.classList.add('scale-100');
             }, 50);
             
-            // Khóa cuộn trang nền để tăng trải nghiệm xem ảnh tập trung
             document.body.classList.add('overflow-hidden');
         }
 
@@ -353,15 +511,21 @@
                 modal.classList.add('hidden');
             }, 200);
             
-            // Mở lại cuộn trang như bình thường
             document.body.classList.remove('overflow-hidden');
         }
 
-        // Chạy hàm render khi cấu trúc trang tải hoàn tất
+        // Chạy khởi tạo render toàn bộ khi load trang xong
         window.onload = function() {
             renderProducts(danhSachQuatTran, 'list-quat-tran');
             renderProducts(danhSachDenOpTran, 'list-den-op-tran');
+            renderProducts(danhSachDenOpHopKim, 'list-den-op-hop-kim');
             renderProducts(danhSachDenChum, 'list-den-chum');
+            renderProducts(danhSachDenTuongHienDai, 'list-den-tuong-hien-dai');
+            renderProducts(danhSachDenTuongNgu, 'list-den-tuong-ngu');
+            renderProducts(danhSachTruCong, 'list-den-tru-cong');
+            renderProducts(danhSachDenPha220v, 'list-den-pha-220v');
+            renderProducts(danhSachDenPhaNLMT, 'list-den-pha-nlmt');
+            renderProducts(danhSachDenSanVuon, 'list-den-san-vuon');
         };
     </script>
 </body>
